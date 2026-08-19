@@ -18,5 +18,14 @@ def eda(df_churn):
                        'Número de Clientes',
                        'Churn (0=Não, 1=Sim)')
     
-    # Grafico de distribuição de fidelidade
-    grafico_histograma_inter("Grafico Histograma", df_churn)
+    # Grafico de distribuição de fidelidade 
+    grafico_histograma_inter("Distribuição da Fidelidade (em Meses) por Churn", 
+                             df_churn,
+                             'Fidelidade_Meses',
+                             'Meses de Fidelidade')
+    
+    # Grafico de distribuição de fatura
+    grafico_histograma_inter("Distribuição da Fatura Mensal por Churn",
+                             df_churn,
+                             'Fatura_Mensal',
+                             'Valor da Fatura Mensal')
