@@ -10,7 +10,7 @@ FIGURE_SIZE = (12, 6)
 TITLE_FONT_SIZE = 14
 AZUL = '#636EFA'
 LARANJA = '#EF553B'
-PATH = "image/"
+PATH = "../image/"
 DPI = 300
 
 
