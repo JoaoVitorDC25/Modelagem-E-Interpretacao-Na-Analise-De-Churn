@@ -1,6 +1,12 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+import plotly.express as px
+import plotly.io as pio
+
+pio.renderers.default = "browser"
+
+
 from config import FIGURE_SIZE, AZUL, LARANJA, TITLE_FONT_SIZE, PATH, DPI
 
 plt.rcParams['figure.figsize'] = FIGURE_SIZE
@@ -43,3 +49,19 @@ def grafico_barras_sns(titulo, dado, xLabel, yLabel, legenda):
     plt.tight_layout()
     plt.savefig(PATH + titulo, dpi=DPI, bbox_inches='tight')
     plt.show()   
+    
+def grafico_histograma_inter(titulo, data):
+  """
+      Função para criar gráfico de histograma, com plotly
+  """
+  
+  fig_hist_fidelidade = px.histogram(data, 
+                                     x='Fidelidade_Meses', 
+                                     color='Churn', 
+                                     marginal='box',
+                                     title=titulo, 
+                                     labels={'Fidelidade_Meses':'Meses de Fidelidade'})
+  
+  fig_hist_fidelidade.write_image(PATH + titulo + ".png", format='png')# Salva a plotagem em /image
+  fig_hist_fidelidade.show()
+  
