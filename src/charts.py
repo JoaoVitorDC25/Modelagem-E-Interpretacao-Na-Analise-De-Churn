@@ -50,18 +50,19 @@ def grafico_barras_sns(titulo, dado, xLabel, yLabel, legenda):
     plt.savefig(PATH + titulo, dpi=DPI, bbox_inches='tight')
     plt.show()   
     
-def grafico_histograma_inter(titulo, data):
+def grafico_histograma_inter(titulo, data, x, label):
   """
       Função para criar gráfico de histograma, com plotly
   """
   
   fig_hist_fidelidade = px.histogram(data, 
-                                     x='Fidelidade_Meses', 
+                                     x, 
                                      color='Churn', 
                                      marginal='box',
                                      title=titulo, 
-                                     labels={'Fidelidade_Meses':'Meses de Fidelidade'})
+                                     labels={x:label})
   
   fig_hist_fidelidade.write_image(PATH + titulo + ".png", format='png')# Salva a plotagem em /image
   fig_hist_fidelidade.show()
+
   
