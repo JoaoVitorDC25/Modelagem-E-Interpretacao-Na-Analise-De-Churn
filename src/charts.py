@@ -27,7 +27,7 @@ def grafico_pie(titulo, data):
     plt.title(titulo, fontsize = TITLE_FONT_SIZE)
     
     plt.tight_layout()
-    plt.savefig(PATH + titulo, dpi=DPI, bbox_inches='tight')
+    plt.savefig(PATH / f"{titulo}.png", dpi=DPI, bbox_inches='tight')
     plt.show()
   
 def grafico_barras_sns(titulo, dado, xLabel, yLabel, legenda):
@@ -47,7 +47,7 @@ def grafico_barras_sns(titulo, dado, xLabel, yLabel, legenda):
     plt.xticks(rotation=0)
         
     plt.tight_layout()
-    plt.savefig(PATH + titulo, dpi=DPI, bbox_inches='tight')
+    plt.savefig(PATH / f"{titulo}.png", dpi=DPI, bbox_inches='tight')
     plt.show()   
     
 def grafico_histograma_inter(titulo, data, x, label):
@@ -62,7 +62,7 @@ def grafico_histograma_inter(titulo, data, x, label):
                                      title=titulo, 
                                      labels={x:label})
   
-  fig_hist_fidelidade.write_image(PATH + titulo + ".png", format='png')# Salva a plotagem em /image
+  fig_hist_fidelidade.write_image(PATH / f"{titulo}.png", format='png')# Salva a plotagem em /image
   fig_hist_fidelidade.show()
 
   
