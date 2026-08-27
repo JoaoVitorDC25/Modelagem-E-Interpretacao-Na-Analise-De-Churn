@@ -1,6 +1,8 @@
 from charts import grafico_pie, grafico_barras_sns, grafico_histograma_inter
 
 def eda(df_churn):
+    
+    
     # Informações do dataframe
     print(f"\n ----- Informações do dataframe: ----- \n")
     df_churn.info()

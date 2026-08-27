@@ -1,5 +1,4 @@
 #/data_generator.py
-
 SEED = 42
 
 #/main.py

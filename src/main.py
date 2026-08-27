@@ -17,7 +17,7 @@ pd.set_option('display.float_format', lambda x: '%.4f' % x)
 df_churn = data_generator(NUM_CLIENTES)
 
 # ----- EDA -----
-#eda(df_churn)
+eda(df_churn)
 
 # ----- PREPROCESSING -----
 y, X = preprocessing(df_churn) 

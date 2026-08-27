@@ -2,8 +2,13 @@ import statsmodels.api as sm
 import numpy as np
 
 def statistic_modeling(y, X):
+    """
+    Ajusta um modelo de Regressão Logística e calcula
+    os Odds Ratios e respectivos intervalos de confiança.
+    """
     
-    modelo = sm.Logit(y, X)
+    
+    modelo = sm.Logit(y, X) #Regressão Logistica
 
     #print(type(modelo))
 

@@ -2,6 +2,10 @@ import pandas as pd
 import statsmodels.api as sm
 
 def preprocessing(data):
+    """
+    Converte Dummies e retorna X (Variável Dependente) e Y(Variável Independente)
+    """
+    
     print(f"\n ----- Dados Originais: ----- \n")
     print(data.head())
     print(f"\n ----- Categorias da variável Contrato: ----- \n")
@@ -24,6 +28,7 @@ def preprocessing(data):
     print(f"\n ----- Dados 'Y' Preparados para o modelo: ----- \n")
     print(y.head())
     
-    return X, y
+    return y, X
+
 
     
